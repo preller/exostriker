@@ -1,0 +1,19 @@
+{
+    "name": "My Python Environment with Exo-Striker Fork",
+    "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y libegl1-mesa gfortran libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 libxcb-xinerama0 libxcb-xkb1 libxkbcommon-x11-0 libxcb-cursor0 && cd /workspaces/exostriker && pip install --upgrade pip && pip install build && python3 -m build && pip install .",
+    "features": {
+        "ghcr.io/devcontainers/features/desktop-lite:1": {}
+    },
+    "forwardPorts": [6080, 5901],
+    "portsAttributes": {
+        "6080": {
+            "label": "Desktop (Web)",
+            "onAutoForward": "notify"
+        },
+        "5901": {
+            "label": "Desktop (VNC)",
+            "onAutoForward": "openBrowser"
+        }
+    }
+}
