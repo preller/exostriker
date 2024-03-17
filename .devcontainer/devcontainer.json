@@ -1,10 +1,6 @@
 {
     "name": "My Python Environment with Exo-Striker Fork",
     "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
-    // "build": {
-    //     "dockerfile": "Dockerfile"
-        // "context": "."
-    },
     "postCreateCommand": "chmod +x /workspaces/exostriker/setup.sh && /bin/bash /workspaces/exostriker/setup.sh",
     "workspaceFolder": "/workspaces/exostriker",
     "remoteUser": "codespace",
