@@ -1,9 +1,13 @@
 {
     "name": "My Python Environment with Exo-Striker Fork",
-    "build": {
-        "dockerfile": "Dockerfile",
-        "context": "."
+    "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+    // "build": {
+    //     "dockerfile": "Dockerfile"
+        // "context": "."
     },
+    "postCreateCommand": "chmod +x /workspaces/exostriker/setup.sh && /bin/bash /workspaces/exostriker/setup.sh",
+    "workspaceFolder": "/workspaces/exostriker",
+    "remoteUser": "codespace",
     "features": {
         "ghcr.io/devcontainers/features/desktop-lite:1": {
             "password": "exostriker",
